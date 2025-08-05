@@ -138,25 +138,24 @@
                     - valor_do_troco = 35
                 - devolve valor_do_troco para cliente
 
-/***************/
 
-Black Cat School
+- Exercicio: Black Cat School
 
-- Como calulcar a média do aluno para saber se ele pasou de ano ou não
+    - Como calulcar a média do aluno para saber se ele pasou de ano ou não
 
-    - quantidade_de_alunos = 5
+        - quantidade_de_alunos = 5
 
-    - quantidade_de_provas = 2
+        - quantidade_de_provas = 2
 
-    - nota_prova_1 = ?
-    - nota_prova_2 = ?
+        - nota_prova_1 = ?
+        - nota_prova_2 = ?
 
-    - nota_final = nota_prova_1 + nota_prova_2
+        - nota_final = nota_prova_1 + nota_prova_2
 
-    - media = nota_final / quantidade_de_provas
+        - media = nota_final / quantidade_de_provas
 
-
-calcula_media_aluno(nota_prova_1, nota_prova_2)
+```shell
+- calcula_media_aluno(nota_prova_1, nota_prova_2)
     - caluclar a nota final
         - nota_final = nota_prova_1 + nota_prova_2
     - calcular a media
@@ -166,45 +165,44 @@ calcula_media_aluno(nota_prova_1, nota_prova_2)
     - se a media for maior ou igual a 5
         - aluno aprovado
     - fim
-
-Jake ----------- 8, 2 ----- APROVADO -- 5 - ( raspando hein )
-Xeroquinho ----- 3, 7 ----- APROVADO -- 5 - ( raspando hein, colo do jake )
+```
+```shell
+Jake ----------- 8, 2 ----- APROVADO -- 5
+Xeroquinho ----- 3, 7 ----- APROVADO -- 5
 Pinguelinho ---- 5, 10 ---- APROVADO -- 7,5
 Pingo ---------- 7, 1 ----- REPROVADO - 4
 Thammy --------- 10, 1 ---- APROVADO -- 5,5
-
-Algoritimo
-
-
-nota_prova_1 = ?
-nota_prova_2 = ?
-quantidade_de_provas = quantidade_de_notas
-quantidade_de_provas = 2
+```
+- Aplicando o Algoritimo
+    - nota_prova_1 = ?
+    - nota_prova_2 = ?
+    - quantidade_de_provas = quantidade_de_notas
+    - quantidade_de_provas = 2
 
 
-- Como calcular as notas de todos os alunos em um unico comando ?
-- ter uma lista de alunos
-    - lista_de_alunos = [
-                            1 - Jake: (8,2),
-                            2 - Xeroquinho: (3,7),
-                            3 - Pinguelinho: (5,10),
-                            4 - Pingo: (7,1),
-                            5 - Thammy: (10,1),
-                        ]
-- para cada aluno dentro da lista execute a tarefa chamada calcula_media_aluno ate o ultimo aluno
-    - quantos alunos ha na lista ?
-        - 5
-    - a lista deve ser executada 5 vezes
-        - calcula_media_aluno(1 n_1, n_2)
-        - calcula_media_aluno(2 n_1, n_2)
-        - calcula_media_aluno(3 n_1, n_2)
-        - calcula_media_aluno(4 n_1, n_2)
-        - calcula_media_aluno(5 n_1, n_2)
-    - a lista chegou no limite maximo ?
-        - sim
-    - fim
+    - Como calcular as notas de todos os alunos em um unico comando ?
+    - ter uma lista de alunos
+        - lista_de_alunos = [
+                                1 - Jake: (8,2),
+                                2 - Xeroquinho: (3,7),
+                                3 - Pinguelinho: (5,10),
+                                4 - Pingo: (7,1),
+                                5 - Thammy: (10,1),
+                            ]
+    - para cada aluno dentro da lista execute a tarefa chamada calcula_media_aluno ate o ultimo aluno
+        - quantos alunos ha na lista ?
+            - 5
+        - a lista deve ser executada 5 vezes
+            - calcula_media_aluno(1 n_1, n_2)
+            - calcula_media_aluno(2 n_1, n_2)
+            - calcula_media_aluno(3 n_1, n_2)
+            - calcula_media_aluno(4 n_1, n_2)
+            - calcula_media_aluno(5 n_1, n_2)
+        - a lista chegou no limite maximo ?
+            - sim
+        - fim
     
-
+```shell
 calcula_media_aluno(nota_prova_1, nota_prova_2)
     - calcular a quantidade de provas
         - quantidade_de_provas = (qtd notas == qtd provas)
@@ -224,3 +222,4 @@ calcula_media_aluno(nota_prova_1, nota_prova_2)
     - se a media for maior ou igual a 5
         - aluno aprovado
     - fim
+```
