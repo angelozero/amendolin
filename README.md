@@ -223,3 +223,43 @@ calcula_media_aluno(nota_prova_1, nota_prova_2)
         - aluno aprovado
     - fim
 ```
+
+- Solução Verena
+```shell
+nota_prova_1 = ?
+
+nota_prova_2 = ?
+
+quantidade_de_provas = quantidade_de_notas
+
+quantidade_de_alunos_reprovados = Jake, Xeroquinho.
+
+1 - Jake: (3,2), 
+2 - Xeroquinho: (3,3), 
+3 - Pinguelinho: (5,10)
+
+
+calcula_media_aluno(nota_prova_1, nota_prova_2)
+    - calcular a quantidade de provas
+        - quantidade_de_provas = (qtd notas == qtd provas)
+        - quantidade_de_provas = nota_prova_1 + nota_prova_2 (2 provas)
+        - quantidade_de_provas = ?
+    - calcular a nota final
+        - nota_final = nota_prova_1 + nota_prova_2
+        - nota_final = ? + ?
+        - nota_final = ?
+    - calcular a media
+        - media = nota_final / quantidade_de_provas
+        - media = ? / ?
+        - media = ?
+
+    - se a media for menor que 5
+        - aluno reprovado
+        - quantidade_de_aluno_reprovado = aluno
+    - se a media for maior ou igual a 5
+        - aluno aprovado
+    - informar a quantidade de alunos reprovados 
+	- verificar quantidade de alunos reprovados dentro de quantidade_de_aluno_reprovado
+	- informar a quantidade de alunos reprovados
+    - fim
+```
