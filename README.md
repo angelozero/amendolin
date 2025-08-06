@@ -263,3 +263,144 @@ calcula_media_aluno(nota_prova_1, nota_prova_2)
 	- informar a quantidade de alunos reprovados
     - fim
 ```
+
+
+### Exercício 1
+```shell
+Biblioteca do Ronildo
+
+•⁠  ⁠Cadastro de nome e idade dos visitantes
+
+•⁠  ⁠Ajude Ronildo a ter controle dos visitantes do local cadastrando nome e idade
+
+•⁠  ⁠Vamos criar um sistema chamado cadastro_facil para ajudar o Ronildo, esse sistema irá armazenar nome e idade conforme solicitado para controle de acesso
+
+•⁠  ⁠cadastro_facil
+	- toda pessoa ao entrar na biblioteca deve se identificar com seu nome = ?
+		- ao receber a resposta o sistema guarda essa informaçao como: "nome" 	
+	- toda pessoa ao entrar na biblioteca deve identificar sua idade = ?
+		- ao receber a resposta o sistema guarda essa informaçao como: "idade"
+
+-cadastro_facil em execuçao:
+
+	- qual seu nome?
+	- R: Jake Matias Brown
+	- qual sua idade ?
+	- R: 11 anos
+	- Cadastro efetuado com sucesso!
+	- Acesso liberado.
+```
+
+### Exercício 2
+```shell
+Horti-Fruti do Ronildo
+
+•⁠  ⁠Aceita tres tipos de pagamento
+
+	- dinheiro
+	- cartao de débito
+	- catao de crédito
+
+•⁠  ⁠Vamos ajudar Ronildo a cobrar seus clientes corretamente!
+
+•⁠  ⁠Quando o cliente esta no caixa o que deve acontecer ?
+
+	- cobrar_cliente
+	- receber_valor_do_cliente
+	- conferir_valor_cliente_com_o_valor_total_do_produto
+	- conferir_forma_de_pagamento
+
+•⁠  ⁠dinheiro
+	
+	- cobrar_cliente
+	- receber_valor_cliente
+	- conferir_valor_cliente x valor_total_do_produto
+	- valor_esta_igual
+	- leva_o_produto
+	- valor_esta_a_menos
+	- nao_leva_o_produto
+	- valor_esta_a_mais
+	- verificar_necessidade_de_troco
+	- dar_troco
+
+		- dar troco
+
+			- receber_o_valor_do_cliente
+			- conferir_o_valor_recebido_com_o_valor_do_produto
+			- calcular_o_valor_do_troco
+			- valor_do_troco (vai receber) valor_recebido_do_cliente (menos) valor_total_do_produto
+			- valor_do_troco = 20 - 10
+			- valor_do_troco = 10
+			- devolve valor_do_troco para cliente
+
+•⁠  ⁠carto de débito
+
+	- cobrar_cliente
+	- receber_o_cartao_do_cliente
+	- passar_o_valor_do_produto_na_maquina
+	- compra_aprovada
+	- leva_o_produto
+	- compra_nao_aprovada
+	- nao_leva_o_produto
+	- nao_há_troco_pois_o_pagamento_é_exato
+
+•⁠  ⁠carto de crédito
+
+	- cobrar_cliente
+	- receber_o_cartao_do_cliente
+	- passar_o_valor_do_produto_na_maquina
+	- compra_aprovada
+	- leva_o_produto
+	- compra_nao_aprovada
+	- nao_leva_o_produto
+	- nao_há_troco_pois_o_pagamento_é_exato
+```
+
+### Exercício 3
+```shell
+Macrameire do Ronildo
+
+•⁠  ⁠Ronildo abriu um atelie de macrame, vamos ajuda-lo a calcular quantos metros de fio ele precisa cortar para fazer um suporte de planta em macrame.
+
+•⁠  ⁠Para cada suporte Ronildo precisa de 4 vezes a altura final do suporte em comprimento de fio, pois é considerados os nós feitos para o acabamento.
+
+•⁠  ⁠Como podemos ajuda-lo?
+
+•⁠  ⁠Por exemplo:
+
+	- O cliente pede um suporte de 1 metro de altura
+	- Ronildo precisará usar 4 vezes essa altura para cortar o fio
+
+•⁠  ⁠Vamos criar um sistema chamado calcula_fio para ajudar o Ronildo em seus calculos 
+
+•⁠  ⁠calcula_fio
+
+	- altura_do_suporte = 1 metro  
+	- quatro_vezes_o_metro = 4
+	- quantidade_de_fio_necessaria = altura_do_suporte × quatro_vezes_o_metro
+	- quantidade_de_fio_necessaria = 1 × 4  
+	- quantidade_de_fio_necessaria = 4 metros
+
+•⁠  ⁠Resultado
+
+Ronildo precisará cortar 4 metros de fio para fazer um suporte de planta de 1 metro de altura
+
+•⁠  ⁠Mas e se Ronildo tem mais de uma encomenda, como podemos ajuda-lo a calcular?
+
+•⁠  ⁠Por exemplo:
+
+	- O cliente pediu cinco suportes de 1 metro de altura
+	- Ronildo precisará usar 4 vezes essa altura para cortar o fio
+
+•⁠  ⁠calcula_fio
+
+	- fio_para_um_suporte = 1 metro × 4 = 4 metros  
+	- quantidade_de_suportes = 5  
+	- quantidade_de_fio_necessaria = altura_do_suporte × quatro_vezes_o_metro
+	- quantidade_de_fio_necessaria = 4 metros × 5  
+	- quantidade_de_fio_necessaria = 20 metros
+
+•⁠  ⁠Resultado
+
+Ronildo precisará cortar 20 metros de fio para fazer 5 suportes de 1 metro cada
+```
