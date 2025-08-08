@@ -310,6 +310,7 @@ Horti-Fruti do Ronildo
 	- conferir_valor_cliente_com_o_valor_total_do_produto
 	- conferir_forma_de_pagamento
 
+
 •⁠  ⁠dinheiro
 	
 	- cobrar_cliente
