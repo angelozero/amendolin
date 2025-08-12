@@ -269,17 +269,20 @@ calcula_media_aluno(nota_prova_1, nota_prova_2)
 ```shell
 Biblioteca do Ronildo
 
-•⁠  ⁠Cadastro de nome e idade dos visitantes
+-⁠  ⁠Cadastro de nome e idade dos visitantes
 
-•⁠  ⁠Ajude Ronildo a ter controle dos visitantes do local cadastrando nome e idade
+-⁠  ⁠Ajude Ronildo a ter controle dos visitantes do local cadastrando nome e idade
 
-•⁠  ⁠Vamos criar um sistema chamado cadastro_facil para ajudar o Ronildo, esse sistema irá armazenar nome e idade conforme solicitado para controle de acesso
+-⁠  ⁠Vamos criar um sistema chamado cadastro_facil para ajudar o Ronildo, esse sistema irá armazenar nome e idade conforme solicitado para controle de acesso
 
-•⁠  ⁠cadastro_facil
+-⁠  ⁠cadastro_facil
 	- toda pessoa ao entrar na biblioteca deve se identificar com seu nome = ?
 		- ao receber a resposta o sistema guarda essa informaçao como: "nome" 	
 	- toda pessoa ao entrar na biblioteca deve identificar sua idade = ?
 		- ao receber a resposta o sistema guarda essa informaçao como: "idade"
+    - toda pessoa ao ter um cadastro concluido com sucesso ganha um numero
+        - esse numero nao se repete e deve ser sequencial
+            - jake - 1 ... xeroquinho - 2 ...
 
 -cadastro_facil em execuçao:
 
@@ -289,30 +292,47 @@ Biblioteca do Ronildo
 	- R: 11 anos
 	- Cadastro efetuado com sucesso!
 	- Acesso liberado.
+    - Ganha um numero
+    - Envia mensagem de bom dia
+        "Bom dia "
+    
+
+    - Soulução para mensagem de bom dia
+        - Repetir a mensagem pela quantidade de usuarios
+            - 2 x vezes sera enviada
+            - "Bom dia " + NOME
+            - "Bom dia " + JAKE
+            - "Bom dia " + XEROQUINHO
+
+
+- [NUMERO - NOME - IDADDE]
+- 1   - JAKE          -   11
+- 2   - XEROQUINHO    -   7
+
+
+
 ```
 
 ### Exercício 2
 ```shell
 Horti-Fruti do Ronildo
 
-•⁠  ⁠Aceita tres tipos de pagamento
+-⁠  ⁠Aceita tres tipos de pagamento
 
 	- dinheiro
 	- cartao de débito
 	- catao de crédito
 
-•⁠  ⁠Vamos ajudar Ronildo a cobrar seus clientes corretamente!
+-⁠  ⁠Vamos ajudar Ronildo a cobrar seus clientes corretamente!
 
-•⁠  ⁠Quando o cliente esta no caixa o que deve acontecer ?
-
+-⁠  ⁠Quando o cliente esta no caixa o que deve acontecer ?
 	- cobrar_cliente
 	- receber_valor_do_cliente
 	- conferir_valor_cliente_com_o_valor_total_do_produto
 	- conferir_forma_de_pagamento
 
 
-•⁠  ⁠dinheiro
-	
+-⁠  ⁠dinheiro	
 	- cobrar_cliente
 	- receber_valor_cliente
 	- conferir_valor_cliente x valor_total_do_produto
@@ -324,8 +344,7 @@ Horti-Fruti do Ronildo
 	- verificar_necessidade_de_troco
 	- dar_troco
 
-		- dar troco
-
+        - dar troco
 			- receber_o_valor_do_cliente
 			- conferir_o_valor_recebido_com_o_valor_do_produto
 			- calcular_o_valor_do_troco
@@ -334,8 +353,7 @@ Horti-Fruti do Ronildo
 			- valor_do_troco = 10
 			- devolve valor_do_troco para cliente
 
-•⁠  ⁠carto de débito
-
+-⁠  ⁠carto de débito
 	- cobrar_cliente
 	- receber_o_cartao_do_cliente
 	- passar_o_valor_do_produto_na_maquina
@@ -345,8 +363,7 @@ Horti-Fruti do Ronildo
 	- nao_leva_o_produto
 	- nao_há_troco_pois_o_pagamento_é_exato
 
-•⁠  ⁠carto de crédito
-
+-⁠  ⁠carto de crédito
 	- cobrar_cliente
 	- receber_o_cartao_do_cliente
 	- passar_o_valor_do_produto_na_maquina
@@ -361,47 +378,69 @@ Horti-Fruti do Ronildo
 ```shell
 Macrameire do Ronildo
 
-•⁠  ⁠Ronildo abriu um atelie de macrame, vamos ajuda-lo a calcular quantos metros de fio ele precisa cortar para fazer um suporte de planta em macrame.
+-⁠  ⁠Ronildo abriu um atelie de macrame, vamos ajuda-lo a calcular quantos metros de fio ele precisa cortar para fazer um suporte de planta em macrame.
 
-•⁠  ⁠Para cada suporte Ronildo precisa de 4 vezes a altura final do suporte em comprimento de fio, pois é considerados os nós feitos para o acabamento.
+-⁠  ⁠Para cada suporte Ronildo precisa de 4 vezes a altura final do suporte em comprimento de fio, pois é considerados os nós feitos para o acabamento.
 
-•⁠  ⁠Como podemos ajuda-lo?
+-⁠  ⁠Como podemos ajuda-lo?
 
-•⁠  ⁠Por exemplo:
+-⁠  ⁠Por exemplo:
 
 	- O cliente pede um suporte de 1 metro de altura
 	- Ronildo precisará usar 4 vezes essa altura para cortar o fio
 
-•⁠  ⁠Vamos criar um sistema chamado calcula_fio para ajudar o Ronildo em seus calculos 
+-⁠  ⁠Vamos criar um sistema chamado calcula_fio para ajudar o Ronildo em seus calculos 
 
-•⁠  ⁠calcula_fio
+-⁠  ⁠calcula_fio
 
 	- altura_do_suporte = 1 metro  
-	- quatro_vezes_o_metro = 4
-	- quantidade_de_fio_necessaria = altura_do_suporte × quatro_vezes_o_metro
+	- vezes_o_metro = 4
+	- quantidade_de_fio_necessaria = altura_do_suporte × vezes_o_metro
 	- quantidade_de_fio_necessaria = 1 × 4  
 	- quantidade_de_fio_necessaria = 4 metros
 
-•⁠  ⁠Resultado
+-⁠  ⁠Resultado
 
 Ronildo precisará cortar 4 metros de fio para fazer um suporte de planta de 1 metro de altura
 
-•⁠  ⁠Mas e se Ronildo tem mais de uma encomenda, como podemos ajuda-lo a calcular?
+-⁠  ⁠Mas e se Ronildo tem mais de uma encomenda, como podemos ajuda-lo a calcular?
 
-•⁠  ⁠Por exemplo:
+-⁠  ⁠Por exemplo:
 
 	- O cliente pediu cinco suportes de 1 metro de altura
 	- Ronildo precisará usar 4 vezes essa altura para cortar o fio
 
-•⁠  ⁠calcula_fio
+-⁠  ⁠calcula_fio
 
 	- fio_para_um_suporte = 1 metro × 4 = 4 metros  
 	- quantidade_de_suportes = 5  
 	- quantidade_de_fio_necessaria = altura_do_suporte × quatro_vezes_o_metro
-	- quantidade_de_fio_necessaria = 4 metros × 5  
+	- quantidade_de_fio_necessaria = 4 metros × 5 (quantidade_de_suportes)  
 	- quantidade_de_fio_necessaria = 20 metros
 
-•⁠  ⁠Resultado
+-⁠  ⁠Resultado
 
 Ronildo precisará cortar 20 metros de fio para fazer 5 suportes de 1 metro cada
 ```
+
+### Tipos de Dados
+    - Tipo texto = "TUDO QUE ESTIVER AQUI 1234567890 !@#$%ˆ&*() É UM TEXTO"
+        - char / String / text ....
+    - Tipo numero = 123456789
+        - number / num / int ...
+    - Tipo logico = 0 ou 1 / verdadeiro ou falso / true ou false
+        - boolean
+
+    String nome = "Verena"
+    String sobre_nome = "Ferreira"
+    String nome_completo = nome + sobre_nome
+    String nome_completo = "VerenaFerreira"
+
+    int idade_verena = 31
+    int idade_jake = 11
+    int resultado = idade_verena + idade_jake
+    int resultado = 42
+
+    boolean tem_mais_de_30_anos = idade_verena é maior que 30 ? 
+    boolean tem_mais_de_30_anos = idade_verena > 30 
+    boolean tem_mais_de_30_anos = true
