@@ -263,7 +263,7 @@ calcula_media_aluno(nota_prova_1, nota_prova_2)
 	- informar a quantidade de alunos reprovados
     - fim
 ```
-
+--- 
 
 ### Exercício 1
 ```shell
@@ -312,6 +312,7 @@ Biblioteca do Ronildo
 
 
 ```
+--- 
 
 ### Exercício 2
 ```shell
@@ -373,6 +374,7 @@ Horti-Fruti do Ronildo
 	- nao_leva_o_produto
 	- nao_há_troco_pois_o_pagamento_é_exato
 ```
+--- 
 
 ### Exercício 3
 ```shell
@@ -422,6 +424,7 @@ Ronildo precisará cortar 4 metros de fio para fazer um suporte de planta de 1 m
 
 Ronildo precisará cortar 20 metros de fio para fazer 5 suportes de 1 metro cada
 ```
+--- 
 
 ### Tipos de Dados
     - Tipo texto = "TUDO QUE ESTIVER AQUI 1234567890 !@#$%ˆ&*() É UM TEXTO"
@@ -444,3 +447,108 @@ Ronildo precisará cortar 20 metros de fio para fazer 5 suportes de 1 metro 
     boolean tem_mais_de_30_anos = idade_verena é maior que 30 ? 
     boolean tem_mais_de_30_anos = idade_verena > 30 
     boolean tem_mais_de_30_anos = true
+
+--- 
+
+### Banco de dados SQL
+
+![image1](./imagens/banco-de-dados-01.drawio.png)
+![image1](./imagens/banco-de-dados-02.drawio.png)
+
+
+--- 
+
+### Programação Orientada a Objetos
+
+```json
+{
+    "nome": "Angelo",
+    "idade": 35,
+    "sexo": "M",
+    
+    "nome": "Verena",
+    "idade": 30,
+    "sexo": "F"
+    //...
+},
+
+// OBJETO
+
+{
+    "Pessoa": {
+        "nome": "",
+        "idade": 0,
+        "sexo": ""
+    }
+}
+```
+```shell
+pessoa.nome = Angelo
+pessoa.idade = 35
+pessoa.sexo = M
+
+pessoa.nome = Verena
+pessoa.idade = 32
+pessoa.sexo = F
+
+# Classe ---> Informação para a construção do objeto ( formulario )
+Pessoa
+    - nome
+    - idade
+    - sexo
+
+# Objeto ---> A informação concreta com os dados da pessoa
+    pessoa.nome = Angelo
+    pessoa.idade = 35
+    pessoa.sexo = M
+```
+
+```java
+public class Pessoa {
+	
+	// Atributos de uma classe 
+	
+	// 1 - tipo do atributo ---> "String"
+	// 2 - o nome do atributo ----> "nome"
+	String nome;
+	
+	// 1 - tipo do atributo ---> "int"
+	// 2 - o nome do atributo ----> "idade"
+	int idade;
+	
+	// 1 - tipo do atributo ---> "String"
+	// 2 - o nome do atributo ----> "sexo"
+	String sexo;
+
+}
+```
+
+```java
+public static void main(String[] args){
+		
+		// Criando um objeto do tipo Pessoa
+		// 1 - Declarar o tipo dele "Pessoa"
+		// 2 - O nome desse objeto "pessoa"
+		// 3 - Instancio com o tipo delcarado "= new Pessoa()"
+		// 4 - P1 representa o objeto pessoa 
+		
+		Pessoa p1  = new Pessoa();
+		p1.idade = 30;
+		p1.nome = "jake";
+		p1.sexo = "M";
+		
+		Pessoa p2 = new Pessoa();
+		p2.idade = 32;
+		p2.nome = "wérens";
+		p2.sexo = "F";
+		
+		System.out.println("Essa pessoa é " + p1.nome);
+		System.out.println("Essa pessoa é " + p2.nome);
+		
+		p1.nome = "xeroquinho";
+		System.out.println("Essa pessoa é " + p1.nome);
+		
+    }
+```
+
+--- 
