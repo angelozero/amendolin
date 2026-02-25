@@ -1,554 +1,272 @@
-# Amendolin
-## Estudos de programação da Verena
+# Java e Orientação a Objeto
+
+## Entendo o uso de
+- palavras reservadas
+- classe
+- instância
+- objetos
+- variáveis
+- métodos
+- parâmetros
+- atributos
+- tipos
+
+### Classe Principal
+
+```java
+// Palavras reservadas do Java
+	// ---> palavras reservadas são aquelas que você não pode usar para criar uma variável/método/classe que tenha o mesmo nome.
+	// ---> Ex. de palavras reservadas: public, class, return, void, double, int, String, boolean ...
+
+// public 
+	// ---> public é uma palavra reservada no java
+	// ---> public aqui é para que a classe Principal seja publica, visível para todo o projeto
+ 
+// class 
+	// ----> class (ou classe) é uma palavra reservada no java
+	// ---> class representa uma Classe em java
+
+// Principal
+	// ---> Principal é o nome da sua classe
+	// ---> Sempre começa com a sua primeira letra em maiúsculo
+
+public class Principal { // a classe Principal abre aqui
+
+	// public
+		// ---> public é uma palavra reservada no java
+		// ---> public aqui é para que o método seja publico, visível para todo o projeto
+
+	// static
+		// ---> o método sendo "static" ( estatico ) NÃO é necessário instanciar a classe para utilizar -> ❌ Classe c1 = new Classe();
+		// ---> métodos estaticos podem ser chamados diretos atraves do Classe.metodo();
+		// ---> Ex. Carro.buzinar(); / Passaro.cantar();
+	
+	// main
+		// ---> main é o nome do método
+		// ---> no java o main é método principal que sempre sera executado primeiro para que seu programa funcione
+
+	// String[]
+		// ---> String[] é um tipo de parâmetro
+		// ---> String[] é do tipo lista de String 
+		// ---> String -> tipo para palavras / texto
+		// ---> [] -----> representa uma lista
+		// ---> String[] -> em um unico tipo posso armazenar mais de uma informação
+		// ---> Uma lista de palavras seria String[] == { "a", "b", "c", "d" }
+
+	// args
+		// ---> args é o nome do parâmetro
+	public static void main(String[] args) {
+
+
+		// Cachorro 
+			// 	---> é a classe que serve como informação para o tipo da variável que esta a sua frente, no caso c1
+		// c1
+			// ---> é o nome da variável
+			// ---> alem de ser uma variavel é tambem a objeto criado devido ao que esta a sua frente " = new Cachorro();"
+		// = new Cachorro();
+			// ---> estamos criando um objeto quando fazemos new Classe(); 
+			// ---> aqui criamos um objeto que é do tipo Cachorro
+			// ---> = new Cachorro();
+		Cachorro c1 = new Cachorro();
+		
+		// aqui estamos atribuindo um valor ao atributo nome do objeto Cachorro
+		c1.nome = "Jake";
+		
+		// String tipoDeLatido
+			// ---> aqui criamos uma variavel do tipo String chamada tipoDeLatido
+			// ---> ela sera responsavel por armazenar a informação que será retornada do método latir() que esta dentro de Cachorro
+		String tipoDeLatido = c1.latir();
+		
+		// System.out.println
+			// ---> comando utilizado para imprimir algo no console
+			// ---> aqui o valor que sera impresso sera: "O tipo de latido do Jake é au au baixinho"
+		System.out.println("O tipo de latido do " + c1.nome + " é " + tipoDeLatido);
+		
+	} // o método main fecha aqui
+	
+} // a classe Principal fecha aqui
+```
+---
+
+### Classe Cachorro
+
+```java
+// Palavras reservadas do Java
+	// ---> palavras reservadas são aquelas que você não pode usar para criar uma variável/método/classe que tenha o mesmo nome.
+	// ---> Ex. de palavras reservadas: public, class, return, void, double, int, String, boolean ...
+
+// public 
+	// ---> public é uma palavra reservada no java
+	// ---> public aqui é para que a classe Cachorro seja publica, visível para todo o projeto
+ 
+// class 
+	// ----> class (ou classe) é uma palavra reservada no java
+	// ---> class representa uma Classe em java
+
+// Cachorro
+	// ---> Cachorro é o nome da sua classe
+	// ---> Sempre começa com a sua primeira letra em maiúsculo
+
+public class Cachorro { // a classe Cachorro abre aqui
+
+	// String
+		// ---> Tipo do atributo
+		// ---> String é para palavras / textos
+	// nomeDoCachorro;
+		// ---> nome que criamos para o atributo
+	String nomeDoCachorro;
+
+	// public
+		// ---> public é uma palavra reservada no java
+		// ---> public aqui é para que o método seja publico, visível para todo o projeto
+
+	// String
+		// ---> se o método vai ter algum tipo de retorno então precisamos declarar qual sera seu tipo
+		// ---> no caso String aqui diz que esse método retorna dados do tipo String (palavras / texto)
+	
+	// latir
+		// ---> latir é o nome do método
+	public String latir() { // o método latir esta dentro da classe Cachorro e abre aqui 
+
+		// return
+			// ---> return é uma palavra reservada no java
+			// ---> palavra utilizada para toda vez que seu método tiver algum tipo de retorno
+			// ---> return aqui sempre irá precisar retornar uma valor do tipo String
+			// ---> este trecho de código funciona porque latirBaixinho(); é um metodo que também retorna uma String
+		return latirBaixinho();
+
+	} // o método latir esta dentro da classe Cachorro e fecha aqui 
+
+	// *** //
+
+	// private
+		// ---> private é uma palavra reservada no java
+		// ---> private aqui é para que APENAS a classe Cachorro consiga enxergar este método
+
+	// String
+		// ---> se o método vai ter algum tipo de retorno então precisamos declarar qual sera seu tipo
+		// ---> no caso String aqui diz que esse método retorna dados do tipo String (palavras / texto)
+	
+	// latirBaixinho
+		// ---> latirBaixinho é o nome do método
+
+	private String latirBaixinho() { // o método latirBaixinho esta dentro da classe Cachorro e abre aqui 
+
+		// return
+			// ---> return é uma palavra reservada no java
+			// ---> palavra utilizada para toda vez que seu método tiver algum tipo de retorno
+			// ---> return aqui retorna uma String que esta fixa declarada entre aspas duplas como: "au au baixinho"
+		return "au au baixinho";
+
+	} // o método latirBaixinho esta dentro da classe Cachorro e fecha aqui 
+
+} // a classe Cachorro fecha aqui
+```
 
 ---
 
-### Fluxograma da Programação
+### Classe Calculadora
+```java
+// Palavras reservadas do Java
+	// ---> palavras reservadas são aquelas que você não pode usar para criar uma variável/método/classe que tenha o mesmo nome.
+	// ---> Ex. de palavras reservadas: public, class, return, void, double, int, String, boolean ...
 
-![fluxo-programaca](./imagens/fluxo-programacao.png)
+// public 
+	// ---> public é uma palavra reservada no java
+	// ---> public aqui é para que a classe Calculadora seja publica, visível para todo o projeto
+ 
+// class 
+	// ----> class (ou classe) é uma palavra reservada no java
+	// ---> class representa uma Classe em java
 
----
+// Calculadora
+	// ---> Calculadora é o nome da sua classe
+	// ---> Sempre começa com a sua primeira letra em maiúsculo
 
-### Video como funciona logica de programção
+public class Calculadora { // a classe Calculadora abre aqui
+	
+	// public
+		// ---> public é uma palavra reservada no java
+		// ---> public aqui é para que o método seja publico, visível para todo o projeto
 
-[Logica de programação com pasta de amendoim e geléia](https://www.youtube.com/watch?v=mhGZRTbUUo8)
+	// static
+		// ---> o método sendo "static" ( estatico ) NÃO é necessário instanciar a classe para utilizar -> ❌ Calculadora c1 = new Calculadora();
+		// ---> métodos estaticos podem ser chamados diretos atraves do Classe.metodo();
+		// ---> Ex. Calculadora.somar(5 , 10);
 
+	// int
+		// ---> se o método vai ter algum tipo de retorno então precisamos declarar qual sera seu tipo
+		// ---> no caso int aqui diz que esse método retorna dados do tipo numeros inteiros
+	
+	// somar
+		// ---> somar é o nome do método
+
+	// parâmetros primeiroValor e segundoValor
+		// ---> métodos podem receber parâmetros
+		// ---> e se o método tem parâmetro, este parâmetro precisa ter um tipo
+		// ---> além do tipo todo parâmetro precisar ter um nome
+		// ---> métodos podem ter muitos parâmtros e para separar eles você utiliza uma virgula
+		// ---> aqui temos 2 parametros: 
+			// ---> 1 -	int primeiroValor
+			// ---> 2 -	int segundoValor
+		// ---> ambos os parâmetros são do tipo int ( numeros )
+
+	public static int somar(int primeiroValor, int segundoValor) { // o método somar esta dentro da classe Calculadora e abre aqui
+
+		// aqui criei uma variavel do tipo int chamada resultado
+		// ela sera responsavel por armazenar o valor da soma entre
+			// ---> primeiroValor + segundoValor
+		int resultado = primeiroValor + segundoValor;
+		
+		// return
+			// ---> return é uma palavra reservada no java
+			// ---> palavra utilizada para toda vez que seu método tiver algum tipo de retorno
+			// ---> return aqui sempre irá precisar retornar uma valor do tipo int
+			// ---> este trecho de código funciona porque resultado é uma variavel do tipo int
+		return resultado;
+
+	} // o método somar esta dentro da classe Calculadora e fecha aqui
+
+} // a classe Calculadora fecha aqui
+```
 
 --- 
 
-### Logica do Lobo, Ovelha e Repolho
-- **Site Jogo**
-    - [Lobo, Ovelha e Repolho](https://clubes.obmep.org.br/blog/112532-2/)
-
-- **Problema**?
-    - Tenho que atravessar o lobo, a ovelha e o repolho para o outro lado do rio.
-
-- **Regras**
-    - O lobo não pode ficar sozinho com a ovelha
-    - A ovelha não pode ficar sozinha com o repolho
-
-- **Solução**
-    - ⁠pegue a ovelha
-    - ⁠coloque a ovelha no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠tire a ovelha do barco
-    - ⁠reme até o outro lado do rio
-    - ⁠pegue o lobo
-    - ⁠coloque o lobo no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠tire o lobo do barco
-    - ⁠pegue a ovelha
-    - ⁠coloque a ovelha no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠tire a ovelha do barco
-    - ⁠pegue o repolho
-    - ⁠coloque o repolho no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠pegue o repolho
-    - ⁠tire o repolho do barco
-    - ⁠reme o barco ate o outro lado do rio
-    - ⁠pegue a ovelha
-    - ⁠coloque a ovelha no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠pegue a ovelha
-    - ⁠tire a ovelha do barco
-
-- **Comparação entre Logica e Código**
-- Lógica
-    - ⁠pegue a ovelha
-    - ⁠coloque a ovelha no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠tire a ovelha do barco
-    - ⁠reme até o outro lado do rio
-    - ⁠pegue o lobo
-    - ⁠coloque o lobo no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠tire o lobo do barco
-    - ⁠pegue a ovelha
-    - ⁠coloque a ovelha no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠tire a ovelha do barco
-    - ⁠pegue o repolho
-    - ⁠coloque o repolho no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠pegue o repolho
-    - ⁠tire o repolho do barco
-    - ⁠reme o barco ate o outro lado do rio
-    - ⁠pegue a ovelha
-    - ⁠coloque a ovelha no barco
-    - ⁠reme o barco até o outro lado do rio
-    - ⁠pegue a ovelha
-    - ⁠tire a ovelha do barco
-
-- Código (angelotlin)
-    - Linguagem Aleatoria
-        - ovelha
-        - barco(ovelha)
-        - barco.remar()
-        - barco.tirarAnimal(ovelha)
-    - Java
-        - Ovelha ovelha = new Ovelha();
-        - Barco barco = new Barco(ovelha);
-        - barco.remar();
-        - barco.removerAnimal("ovelha");
-        - barco.remar();
-
-- **Algoritmos e Variaveis**
-    - Algoritimo - Uma sequencia logica de passos a serem executados
-    - Variavel - Espaço na memória para armazenarmos alguma informação
-
-    - Exemplo
-        - Padoca do Ronildo
-            - Aceita apenas um tipo de pagamento
-                - Dinheiro
-
-            - Ajude o ronildo a cobrar os seus clientes corretamente!
-
-            - Quando o cliente esta no caixa, o que deve acontecer ?
-                - valor_recebido_do_cliente = 3
-                - valor_total_do_produto = 10
-                - valor_do_troco = ?
-                - nome_do_cliente = "Werens"
-
-            - verificar o valor do produto
-            - cobrar o valor total do cliente
-            - o cliente deve pagar o produto 
-            - consultar o valor que o cliente esta pagando:
-                
-            - se o valor pago do cliente não for o valor total do produto, o que deve acontecer ?
-                - não leva o produto
-
-                - se o valor pago do cliente for igual ao valor total do produto, o que deve acontecer ?
-                - leva o produto
-
-                - se o valor pago do cliente for a mais que o valor total do produto, o que deve acontecer ?
-                - dar o troco "dar_troco()"
-            
-            - fim
-            - Obrigado por comprar comigo "nome_do_cliente"
-
-            - dar_troco()
-                - receber o valor
-                - conferir o valor recebido com o valor do produto
-                - valores estão preenchidos ? sim
-                - se estão preenchido (recebidos) ?
-                    - calcular o valor do troco
-                    - valor_do_troco (vai receber) valor_recebido_do_cliente (menos) valor_total_do_produto
-                    - valor_do_troco = 50 - 15
-                    - valor_do_troco = 35
-                - devolve valor_do_troco para cliente
-
-
-- Exercicio: Black Cat School
-
-    - Como calulcar a média do aluno para saber se ele pasou de ano ou não
-
-        - quantidade_de_alunos = 5
-
-        - quantidade_de_provas = 2
-
-        - nota_prova_1 = ?
-        - nota_prova_2 = ?
-
-        - nota_final = nota_prova_1 + nota_prova_2
-
-        - media = nota_final / quantidade_de_provas
-
-```shell
-- calcula_media_aluno(nota_prova_1, nota_prova_2)
-    - caluclar a nota final
-        - nota_final = nota_prova_1 + nota_prova_2
-    - calcular a media
-        - media = nota_final / quantidade_de_provas
-    - se a media for menor que 5
-        - aluno reprovado
-    - se a media for maior ou igual a 5
-        - aluno aprovado
-    - fim
-```
-```shell
-Jake ----------- 8, 2 ----- APROVADO -- 5
-Xeroquinho ----- 3, 7 ----- APROVADO -- 5
-Pinguelinho ---- 5, 10 ---- APROVADO -- 7,5
-Pingo ---------- 7, 1 ----- REPROVADO - 4
-Thammy --------- 10, 1 ---- APROVADO -- 5,5
-```
-- Aplicando o Algoritimo
-    - nota_prova_1 = ?
-    - nota_prova_2 = ?
-    - quantidade_de_provas = quantidade_de_notas
-    - quantidade_de_provas = 2
-
-
-    - Como calcular as notas de todos os alunos em um unico comando ?
-    - ter uma lista de alunos
-        - lista_de_alunos = [
-                                1 - Jake: (8,2),
-                                2 - Xeroquinho: (3,7),
-                                3 - Pinguelinho: (5,10),
-                                4 - Pingo: (7,1),
-                                5 - Thammy: (10,1),
-                            ]
-    - para cada aluno dentro da lista execute a tarefa chamada calcula_media_aluno ate o ultimo aluno
-        - quantos alunos ha na lista ?
-            - 5
-        - a lista deve ser executada 5 vezes
-            - calcula_media_aluno(1 n_1, n_2)
-            - calcula_media_aluno(2 n_1, n_2)
-            - calcula_media_aluno(3 n_1, n_2)
-            - calcula_media_aluno(4 n_1, n_2)
-            - calcula_media_aluno(5 n_1, n_2)
-        - a lista chegou no limite maximo ?
-            - sim
-        - fim
-    
-```shell
-calcula_media_aluno(nota_prova_1, nota_prova_2)
-    - calcular a quantidade de provas
-        - quantidade_de_provas = (qtd notas == qtd provas)
-        - quantidade_de_provas = nota_prova_1 + nota_prova_2 (2 provas)
-        - quantidade_de_provas = ?
-    - calcular a nota final
-        - nota_final = nota_prova_1 + nota_prova_2
-        - nota_final = ? + ?
-        - nota_final = ?
-    - calcular a media
-        - media = nota_final / quantidade_de_provas
-        - media = ? / ?
-        - media = ?
-
-    - se a media for menor que 5
-        - aluno reprovado
-    - se a media for maior ou igual a 5
-        - aluno aprovado
-    - fim
-```
-
-- Solução Verena
-```shell
-nota_prova_1 = ?
-
-nota_prova_2 = ?
-
-quantidade_de_provas = quantidade_de_notas
-
-quantidade_de_alunos_reprovados = Jake, Xeroquinho.
-
-1 - Jake: (3,2), 
-2 - Xeroquinho: (3,3), 
-3 - Pinguelinho: (5,10)
-
-
-calcula_media_aluno(nota_prova_1, nota_prova_2)
-    - calcular a quantidade de provas
-        - quantidade_de_provas = (qtd notas == qtd provas)
-        - quantidade_de_provas = nota_prova_1 + nota_prova_2 (2 provas)
-        - quantidade_de_provas = ?
-    - calcular a nota final
-        - nota_final = nota_prova_1 + nota_prova_2
-        - nota_final = ? + ?
-        - nota_final = ?
-    - calcular a media
-        - media = nota_final / quantidade_de_provas
-        - media = ? / ?
-        - media = ?
-
-    - se a media for menor que 5
-        - aluno reprovado
-        - quantidade_de_aluno_reprovado = aluno
-    - se a media for maior ou igual a 5
-        - aluno aprovado
-    - informar a quantidade de alunos reprovados 
-	- verificar quantidade de alunos reprovados dentro de quantidade_de_aluno_reprovado
-	- informar a quantidade de alunos reprovados
-    - fim
-```
---- 
-
-### Exercício 1
-```shell
-Biblioteca do Ronildo
-
--⁠  ⁠Cadastro de nome e idade dos visitantes
-
--⁠  ⁠Ajude Ronildo a ter controle dos visitantes do local cadastrando nome e idade
-
--⁠  ⁠Vamos criar um sistema chamado cadastro_facil para ajudar o Ronildo, esse sistema irá armazenar nome e idade conforme solicitado para controle de acesso
-
--⁠  ⁠cadastro_facil
-	- toda pessoa ao entrar na biblioteca deve se identificar com seu nome = ?
-		- ao receber a resposta o sistema guarda essa informaçao como: "nome" 	
-	- toda pessoa ao entrar na biblioteca deve identificar sua idade = ?
-		- ao receber a resposta o sistema guarda essa informaçao como: "idade"
-    - toda pessoa ao ter um cadastro concluido com sucesso ganha um numero
-        - esse numero nao se repete e deve ser sequencial
-            - jake - 1 ... xeroquinho - 2 ...
-
--cadastro_facil em execuçao:
-
-	- qual seu nome?
-	- R: Jake Matias Brown
-	- qual sua idade ?
-	- R: 11 anos
-	- Cadastro efetuado com sucesso!
-	- Acesso liberado.
-    - Ganha um numero
-    - Envia mensagem de bom dia
-        "Bom dia "
-    
-
-    - Soulução para mensagem de bom dia
-        - Repetir a mensagem pela quantidade de usuarios
-            - 2 x vezes sera enviada
-            - "Bom dia " + NOME
-            - "Bom dia " + JAKE
-            - "Bom dia " + XEROQUINHO
-
-
-- [NUMERO - NOME - IDADDE]
-- 1   - JAKE          -   11
-- 2   - XEROQUINHO    -   7
-
-
-
-```
---- 
-
-### Exercício 2
-```shell
-Horti-Fruti do Ronildo
-
--⁠  ⁠Aceita tres tipos de pagamento
-
-	- dinheiro
-	- cartao de débito
-	- catao de crédito
-
--⁠  ⁠Vamos ajudar Ronildo a cobrar seus clientes corretamente!
-
--⁠  ⁠Quando o cliente esta no caixa o que deve acontecer ?
-	- cobrar_cliente
-	- receber_valor_do_cliente
-	- conferir_valor_cliente_com_o_valor_total_do_produto
-	- conferir_forma_de_pagamento
-
-
--⁠  ⁠dinheiro	
-	- cobrar_cliente
-	- receber_valor_cliente
-	- conferir_valor_cliente x valor_total_do_produto
-	- valor_esta_igual
-	- leva_o_produto
-	- valor_esta_a_menos
-	- nao_leva_o_produto
-	- valor_esta_a_mais
-	- verificar_necessidade_de_troco
-	- dar_troco
-
-        - dar troco
-			- receber_o_valor_do_cliente
-			- conferir_o_valor_recebido_com_o_valor_do_produto
-			- calcular_o_valor_do_troco
-			- valor_do_troco (vai receber) valor_recebido_do_cliente (menos) valor_total_do_produto
-			- valor_do_troco = 20 - 10
-			- valor_do_troco = 10
-			- devolve valor_do_troco para cliente
-
--⁠  ⁠carto de débito
-	- cobrar_cliente
-	- receber_o_cartao_do_cliente
-	- passar_o_valor_do_produto_na_maquina
-	- compra_aprovada
-	- leva_o_produto
-	- compra_nao_aprovada
-	- nao_leva_o_produto
-	- nao_há_troco_pois_o_pagamento_é_exato
-
--⁠  ⁠carto de crédito
-	- cobrar_cliente
-	- receber_o_cartao_do_cliente
-	- passar_o_valor_do_produto_na_maquina
-	- compra_aprovada
-	- leva_o_produto
-	- compra_nao_aprovada
-	- nao_leva_o_produto
-	- nao_há_troco_pois_o_pagamento_é_exato
-```
---- 
-
-### Exercício 3
-```shell
-Macrameire do Ronildo
-
--⁠  ⁠Ronildo abriu um atelie de macrame, vamos ajuda-lo a calcular quantos metros de fio ele precisa cortar para fazer um suporte de planta em macrame.
-
--⁠  ⁠Para cada suporte Ronildo precisa de 4 vezes a altura final do suporte em comprimento de fio, pois é considerados os nós feitos para o acabamento.
-
--⁠  ⁠Como podemos ajuda-lo?
-
--⁠  ⁠Por exemplo:
-
-	- O cliente pede um suporte de 1 metro de altura
-	- Ronildo precisará usar 4 vezes essa altura para cortar o fio
-
--⁠  ⁠Vamos criar um sistema chamado calcula_fio para ajudar o Ronildo em seus calculos 
-
--⁠  ⁠calcula_fio
-
-	- altura_do_suporte = 1 metro  
-	- vezes_o_metro = 4
-	- quantidade_de_fio_necessaria = altura_do_suporte × vezes_o_metro
-	- quantidade_de_fio_necessaria = 1 × 4  
-	- quantidade_de_fio_necessaria = 4 metros
-
--⁠  ⁠Resultado
-
-Ronildo precisará cortar 4 metros de fio para fazer um suporte de planta de 1 metro de altura
-
--⁠  ⁠Mas e se Ronildo tem mais de uma encomenda, como podemos ajuda-lo a calcular?
-
--⁠  ⁠Por exemplo:
-
-	- O cliente pediu cinco suportes de 1 metro de altura
-	- Ronildo precisará usar 4 vezes essa altura para cortar o fio
-
--⁠  ⁠calcula_fio
-
-	- fio_para_um_suporte = 1 metro × 4 = 4 metros  
-	- quantidade_de_suportes = 5  
-	- quantidade_de_fio_necessaria = altura_do_suporte × quatro_vezes_o_metro
-	- quantidade_de_fio_necessaria = 4 metros × 5 (quantidade_de_suportes)  
-	- quantidade_de_fio_necessaria = 20 metros
-
--⁠  ⁠Resultado
-
-Ronildo precisará cortar 20 metros de fio para fazer 5 suportes de 1 metro cada
-```
---- 
-
-### Tipos de Dados
-    - Tipo texto = "TUDO QUE ESTIVER AQUI 1234567890 !@#$%ˆ&*() É UM TEXTO"
-        - char / String / text ....
-    - Tipo numero = 123456789
-        - number / num / int ...
-    - Tipo logico = 0 ou 1 / verdadeiro ou falso / true ou false
-        - boolean
-
-    String nome = "Verena"
-    String sobre_nome = "Ferreira"
-    String nome_completo = nome + sobre_nome
-    String nome_completo = "VerenaFerreira"
-
-    int idade_verena = 31
-    int idade_jake = 11
-    int resultado = idade_verena + idade_jake
-    int resultado = 42
-
-    boolean tem_mais_de_30_anos = idade_verena é maior que 30 ? 
-    boolean tem_mais_de_30_anos = idade_verena > 30 
-    boolean tem_mais_de_30_anos = true
-
---- 
-
-### Banco de dados SQL
-
-![image1](./imagens/banco-de-dados-01.drawio.png)
-![image1](./imagens/banco-de-dados-02.drawio.png)
-
-
---- 
-
-### Programação Orientada a Objetos
-
-```json
-{
-    "nome": "Angelo",
-    "idade": 35,
-    "sexo": "M",
-    
-    "nome": "Verena",
-    "idade": 30,
-    "sexo": "F"
-    //...
-},
-
-// OBJETO
-
-{
-    "Pessoa": {
-        "nome": "",
-        "idade": 0,
-        "sexo": ""
-    }
-}
-```
-```shell
-pessoa.nome = Angelo
-pessoa.idade = 35
-pessoa.sexo = M
-
-pessoa.nome = Verena
-pessoa.idade = 32
-pessoa.sexo = F
-
-# Classe ---> Informação para a construção do objeto ( formulario )
-Pessoa
-    - nome
-    - idade
-    - sexo
-
-# Objeto ---> A informação concreta com os dados da pessoa
-    pessoa.nome = Angelo
-    pessoa.idade = 35
-    pessoa.sexo = M
-```
+### Classe ExercicioVerena
 
 ```java
-public class Pessoa {
-	
-	// Atributos de uma classe 
-	
-	// 1 - tipo do atributo ---> "String"
-	// 2 - o nome do atributo ----> "nome"
-	String nome;
-	
-	// 1 - tipo do atributo ---> "int"
-	// 2 - o nome do atributo ----> "idade"
-	int idade;
-	
-	// 1 - tipo do atributo ---> "String"
-	// 2 - o nome do atributo ----> "sexo"
-	String sexo;
+// Palavras reservadas do Java
+	// ---> palavras reservadas são aquelas que você não pode usar para criar uma variável/método/classe que tenha o mesmo nome.
+	// ---> Ex. de palavras reservadas: public, class, return, void, double, int, String, boolean ...
 
-}
+// public 
+	// ---> public é uma palavra reservada no java
+	// ---> public aqui é para que a classe Principal seja publica, visível para todo o projeto
+ 
+// class 
+	// ----> class (ou classe) é uma palavra reservada no java
+	// ---> class representa uma Classe em java
+
+// ExercicioVerena
+	// ---> PrinExercicioVerenacipal é o nome da sua classe
+	// ---> Sempre começa com a sua primeira letra em maiúsculo
+
+public class ExercicioVerena { // a classe ExercicioVerena abre aqui
+	
+	public static void main(String[] args) {
+		
+		// aqui criei uma variavel do tipo double chamada resultado
+		// na sequencia chamo a classe Calculadora sem criar uma instancia dela
+			// ---> ❌ Calculadora calc = new Calculadora(); NÃO PRECISA!
+		// apos o nome da classe invoco diretamente seu metodo somar passando DOIS parametros numéricos ( precisam ser numeros "int")
+			// primeiro parametro é: 5
+			// segundo parametro é: 10
+		double resultado = Calculadora.somar(5, 10);
+		
+		// Aqui imprimo no console o resultado que retornou da execução do método .somar();
+		// "O resultado do calculo de somar é 15"
+	    System.out.println("O resultado do calculo de somar é " + resultado);	
+	}
+
+} // a classe ExercicioVerena fecha aqui
 ```
-
-```java
-public static void main(String[] args){
-		
-		// Criando um objeto do tipo Pessoa
-		// 1 - Declarar o tipo dele "Pessoa"
-		// 2 - O nome desse objeto "pessoa"
-		// 3 - Instancio com o tipo delcarado "= new Pessoa()"
-		// 4 - P1 representa o objeto pessoa 
-		
-		Pessoa p1  = new Pessoa();
-		p1.idade = 30;
-		p1.nome = "jake";
-		p1.sexo = "M";
-		
-		Pessoa p2 = new Pessoa();
-		p2.idade = 32;
-		p2.nome = "wérens";
-		p2.sexo = "F";
-		
-		System.out.println("Essa pessoa é " + p1.nome);
-		System.out.println("Essa pessoa é " + p2.nome);
-		
-		p1.nome = "xeroquinho";
-		System.out.println("Essa pessoa é " + p1.nome);
-		
-    }
-```
-
---- 
